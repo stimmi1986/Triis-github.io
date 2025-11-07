@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./triis.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Triis</title>
+
+   <style>
+      html, body, #app { margin: 0; background: #0e0f12; color: #e6e7ea; }
+      .hud {
+        display: absolute; position: fixed; top: 0.75rem; left: 0.75rem; background: rgba(0,0,0,0.5);
+        padding: 0.6rem 0.8rem; border-radius: 10px; font-family: system-ui, sans-serif; line-height: 1.35;
+        box-shadow: 0 6px 20px rgba(0,0,0,0.35); backdrop-filter: blur(4px);
+      }
+      .hud kbd { background:#1c1f27; padding:0.1rem 0.35rem; border-radius:6px; border:1px solid #2a2f3a }
+      .score { font-weight: 700 }
+      .link { position: fixed; bottom: 0.75rem; left: 0.75rem; opacity: 0.7; }
+      canvas { outline: none; }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <div class="hud">
+        <div><strong>Triis</strong> — 3D tromino Tetris-like</div>
+        <div>Move: A W S D &nbsp;|&nbsp; Rotate: <kbd>Q</kbd> x-axis, <kbd>E</kbd> y-axis, <kbd>X</kbd> z-axis</div>
+        <div>Drop: <kbd>Space</kbd> &nbsp;|&nbsp; Pause: <kbd>P</kbd> &nbsp;|&nbsp; Reset: <kbd>R</kbd></div>
+        <div>Mouse: Orbit view</div>
+        <div>Score: <span class="score" id="score">0</span></div>
+        <div>Level: <span id="level">1</span> &nbsp; Lines: <span id="lines">0</span></div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
